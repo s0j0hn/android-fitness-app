@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/jan/FitnessApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/home/jan/FitnessApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.1_4544ab2f3d574e63df71cfe25fdbab8e7185dcd9.jar" />
+    </item>
+    <item
+        jar="/home/jan/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/home/jan/FitnessApp/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_1b53cb310bb995f37292f7092518c7270fa9920c.jar" />
+    </item>
+    <item
+        jar="/home/jan/FitnessApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/home/jan/FitnessApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.1_8d04cba24c5907552c7aa4ea0ad3b728b79bdce6.jar" />
+    </item>
+    <item
+        jar="/home/jan/FitnessApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/home/jan/FitnessApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_61973901d5450ab781614dff930b5ffe2fcf91ff.jar" />
+    </item>
+    <item
+        jar="/home/jan/FitnessApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/home/jan/FitnessApp/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_5a713e3f18d45ed3b957e3907df143787c30bfd4.jar" />
+    </item>
+    <item
+        jar="/home/jan/FitnessApp/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/home/jan/FitnessApp/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.1_1bb8d529cbe8c5650f064a2d9c3ddec4d5ada99f.jar" />
+    </item>
+    <item
+        jar="/home/jan/FitnessApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/home/jan/FitnessApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.1_afb40db2505568e9bfcd3d49cbe4097b6f79b2f4.jar" />
+    </item>
+    <item
+        jar="/home/jan/FitnessApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/home/jan/FitnessApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.1_bd8e70cad3992de90bf48ce20940791adfe89535.jar" />
+    </item>
+
+</items>
