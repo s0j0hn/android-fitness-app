@@ -18,12 +18,13 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/runnerweight"/>
+                    android:id="@+id/runnerweight"
+                    android:text="@string/weighttypo"/>
             <Button
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:layout_weight="20"
-                    android:id="@+id/runnerbutton"/>
+                    android:id="@+id/runnerbutton" android:text="@string/weightbutton"/>
         </LinearLayout>
 
 

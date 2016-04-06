@@ -1,5 +1,6 @@
 package fitnessapp.supinfo.fitnessapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,9 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import fitnessapp.supinfo.fitnessapp.adapters.RunnerListTextviewListener;
+import fitnessapp.supinfo.fitnessapp.listeners.RunnerListTextviewListener;
 import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
 
@@ -69,12 +68,40 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case MainActivity.RUNNER_ACTIVITY_CODE:
+                if(resultCode == RESULT_OK) {
+                    Bundle b = data.getExtras();
+                    Runner q = (Runner)b.getSerializable("weight");
+                    //this.array.set(b.getInt("id"), q);
+                    this.rDAO.save(q);
+                    this.refresh();
+
+                }
+                break;
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        Log.i("RUNNER", "SAVED");
+        outState.putString("newWeight", ((EditText) findViewById(R.id.runnerweight)).getText().toString().trim());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        ((EditText) findViewById(R.id.runnerweight)).setText(savedInstanceState.getString("newWeight"));
+        Log.i("RUNNER", "RESTORED");
+    }
+
     public void refresh() {
 
         this.rlist = this.rDAO.getAll();
-
-
-
     }
 
     @Override
@@ -107,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new WeightFragment();
                     break;
                 case 1:
-                    FootTrackActivity.newInstance();
+                    fragment = new StatsFragment();
                     break;
                 case 2:
                     fragment = new StatsFragment();

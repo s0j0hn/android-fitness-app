@@ -1,4 +1,4 @@
-package fitnessapp.supinfo.fitnessapp.adapters;
+package fitnessapp.supinfo.fitnessapp.listeners;
 
 import android.app.Activity;
 import android.content.Intent;
