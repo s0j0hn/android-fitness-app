@@ -24,7 +24,9 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:layout_weight="20"
-                    android:id="@+id/runnerbutton" android:text="@string/weightbutton"/>
+                    android:id="@+id/runnerbutton" android:text="@string/weightbutton"
+                    android:onClick="add"
+            />
         </LinearLayout>
 
 

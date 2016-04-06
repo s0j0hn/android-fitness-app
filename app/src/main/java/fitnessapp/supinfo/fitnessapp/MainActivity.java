@@ -1,5 +1,7 @@
 package fitnessapp.supinfo.fitnessapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,11 +18,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 import fitnessapp.supinfo.fitnessapp.listeners.RunnerListTextviewListener;
 import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private RunnerDAOImpl rDAO;
     private ViewPager mViewPager;
     public static final int RUNNER_ACTIVITY_CODE = 1;
+    private Runner runner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,15 +53,6 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         this.rDAO = new RunnerDAOImpl(this);
         if (savedInstanceState != null) {
             ((EditText) findViewById(R.id.runnerweight)).setText(savedInstanceState.getString("Type here"));
@@ -66,6 +62,31 @@ public class MainActivity extends AppCompatActivity {
 
         this.refresh();
 
+    }
+
+    public void add(View view) {
+        EditText eText = (EditText) findViewById(R.id.runnerweight);
+
+        if (eText.getText().toString().trim().length() > 0) {
+            this.addWeight(Integer.valueOf(String.valueOf(eText.getText())));
+
+            eText.setText("");
+            Toast.makeText(this, "Weight added.", Toast.LENGTH_SHORT).show();
+            ;
+        } else {
+            Toast.makeText(this, "Empty field !", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+
+    public void addWeight(int weight) {
+        Runner runner = new Runner();
+        runner.setWeight(weight);
+        runner.setDate(Calendar.getInstance().getTime());
+
+        this.rDAO.save(runner);
+        this.refresh();
     }
 
     @Override
