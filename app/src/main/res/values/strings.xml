@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">FitnessApp</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_section1">Weight</string>
+    <string name="title_section2">Foot Track</string>
+    <string name="title_section3">Stats</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

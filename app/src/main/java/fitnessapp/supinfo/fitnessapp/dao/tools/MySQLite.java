@@ -1,9 +1,9 @@
-package fitnessapp.supinfo.fitnessapp.tools;
+package fitnessapp.supinfo.fitnessapp.dao.tools;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import fitnessapp.supinfo.fitnessapp.implemented.RunnerDAOImpl;
+import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
 
 /**
  * Created by jan on 26/03/16.

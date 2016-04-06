@@ -1,4 +1,4 @@
-package fitnessapp.supinfo.fitnessapp.implemented;
+package fitnessapp.supinfo.fitnessapp.dao.implemented;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import fitnessapp.supinfo.fitnessapp.dao.RunnerDAO;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
-import fitnessapp.supinfo.fitnessapp.tools.MySQLite;
+import fitnessapp.supinfo.fitnessapp.dao.tools.MySQLite;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
