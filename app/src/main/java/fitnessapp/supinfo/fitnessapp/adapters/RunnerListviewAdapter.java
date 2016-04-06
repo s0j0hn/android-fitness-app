@@ -11,9 +11,6 @@ import fitnessapp.supinfo.fitnessapp.model.Runner;
 
 import java.util.List;
 
-/**
- * Created by jan on 06/04/16.
- */
 public class RunnerListviewAdapter extends BaseAdapter {
     private List<Runner> runners;
     private Context context;
@@ -45,9 +42,13 @@ public class RunnerListviewAdapter extends BaseAdapter {
 
         text.setPadding(15, 15, 15, 15);
         text.setText(item.getWeight());
-        text.setText((CharSequence) item.getDate());
         text.setTextSize(20);
-
+        if(position % 2 == 0){
+            text.setBackgroundColor(Color.rgb(200, 200, 200));
+        }
+        else {
+            text.setBackgroundColor(Color.rgb(255,255,255));
+        }
         return text;
     }
 }

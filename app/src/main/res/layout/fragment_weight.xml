@@ -3,7 +3,7 @@
               android:layout_height="fill_parent" xmlns:tools="http://schemas.android.com/tools"
               android:id="@+id/runnersList"
               android:orientation="vertical"
-              tools:context="fitnessapp.supinfo.fitnessapp.WeightFragment">
+              tools:context="fitnessapp.supinfo.fitnessapp.RunnerListActivity">
 
         <LinearLayout
                 android:layout_width="fill_parent"
@@ -19,7 +19,7 @@
                     android:inputType="number"
                     android:ems="10"
                     android:id="@+id/runnerweight"
-                    android:text="@string/weighttypo"/>
+            />
             <Button
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
@@ -28,15 +28,12 @@
                     android:onClick="add"
             />
         </LinearLayout>
+    <ListView
+            android:id="@+id/runnersview"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" />
 
 
-        <ListView
-                android:id="@+id/runnerview"
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:orientation="vertical" />
-
-
-
-    </LinearLayout>
+</LinearLayout>
 

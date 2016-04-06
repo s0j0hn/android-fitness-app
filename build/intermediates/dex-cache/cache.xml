@@ -30,6 +30,13 @@
         <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-40341157e82b13018fcc80d24bf4256881eaac86.jar" />
     </item>
     <item
+        jar="/home/jan/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1-1b53cb310bb995f37292f7092518c7270fa9920c.jar" />
+    </item>
+    <item
         jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
@@ -44,11 +51,25 @@
         <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-26bba8e519f1060de4de46cc5b3915419dc11c49.jar" />
     </item>
     <item
+        jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-83251ccaadf17d9bc442a54168a228df9f662e99.jar" />
+    </item>
+    <item
         jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="9cad249cf62751a323d9af568caf12284b7d6062">
         <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-64fd3b1d5832a9694f0eebf312be30686995a117.jar" />
+    </item>
+    <item
+        jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-1ec965377d1eae6a619d95415fc8743c6954d783.jar" />
     </item>
     <item
         jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
@@ -114,6 +135,13 @@
         <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-8a995555fbd52e2bf5f9bca26d6a089779a97160.jar" />
     </item>
     <item
+        jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-0117a1ce9fbe5ad2d4a002f30c53282ef25423cd.jar" />
+    </item>
+    <item
         jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
@@ -135,11 +163,25 @@
         <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-ec07df7c7ee52091c101a8e323af5375e0945f0d.jar" />
     </item>
     <item
+        jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-94043c5f8791808f65e93a55cb1183872e864285.jar" />
+    </item>
+    <item
         jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
         <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-c6c536ea29d99410df5111946c986aab4c45a572.jar" />
+    </item>
+    <item
+        jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-d0216b70a103cc560f4ec4ba12bbde5e38758bbb.jar" />
     </item>
     <item
         jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
@@ -163,6 +205,13 @@
         <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-b13ebe53092a402dc15a1b80e2dfdcd525d0188e.jar" />
     </item>
     <item
+        jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-c0ba57b1c633f3ac27bff33869cc84a6ec6ec9e2.jar" />
+    </item>
+    <item
         jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
@@ -182,6 +231,13 @@
         revision="23.0.2"
         sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
         <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-f128942859e1c51e3e5d802d61c1a3869dfed67a.jar" />
+    </item>
+    <item
+        jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-1742a0594801c3bf18ac65916bcefc587c7c60bc.jar" />
     </item>
 
 </items>

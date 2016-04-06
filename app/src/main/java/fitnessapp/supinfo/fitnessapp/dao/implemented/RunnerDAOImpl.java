@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class RunnerDAOImpl implements RunnerDAO {
 
-    public static final String TABLE_NAME = "runner";
+    public static final String TABLE_NAME = "runners";
     public static final String RUNNER_DATE = "date";
     public static final String RUNNER_WEIGHT = "weight";
 
@@ -100,9 +100,9 @@ public class RunnerDAOImpl implements RunnerDAO {
 
         while (!cursor.isAfterLast()){
             Runner r = new Runner();
-            r.setWeight(cursor.getColumnIndex(RUNNER_WEIGHT));
+            r.setWeight(cursor.getInt(cursor.getColumnIndex(RUNNER_WEIGHT)));
             //On formate notre date avant de l'envoyer
-            SimpleDateFormat formater = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
             try {
                 r.setDate(formater.parse(cursor.getString(cursor.getColumnIndex(RUNNER_DATE))));
             }catch (ParseException e){

@@ -4,11 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import fitnessapp.supinfo.fitnessapp.MainActivity;
+import fitnessapp.supinfo.fitnessapp.RunnerListActivity;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
 
-/**
- * Created by jan on 06/04/16.
- */
 public class RunnerListTextviewListener implements View.OnClickListener {
 
     private static Activity activity;
@@ -16,7 +14,7 @@ public class RunnerListTextviewListener implements View.OnClickListener {
     private Runner runner;
 
 
-    public RunnerListTextviewListener(int id, Runner quote) {
+    public RunnerListTextviewListener(int id, Runner runner) {
         this.id = id;
         this.runner = runner;
     }
@@ -25,7 +23,7 @@ public class RunnerListTextviewListener implements View.OnClickListener {
         activity = a;
     }
 
-    public void setRunner(Runner quote) {
+    public void setRunner(Runner runner) {
         this.runner = runner;
     }
 
@@ -33,7 +31,7 @@ public class RunnerListTextviewListener implements View.OnClickListener {
     public void onClick(View v) {
         Intent intent = new Intent(activity, MainActivity.class);
         intent.putExtra("id", this.id);
-        intent.putExtra("quote", this.runner);
+        intent.putExtra("runner", this.runner);
         this.activity.startActivityForResult(intent, MainActivity.RUNNER_ACTIVITY_CODE);
 
 
