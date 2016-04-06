@@ -18,7 +18,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
+import fitnessapp.supinfo.fitnessapp.adapters.RunnerListviewAdapter;
 import fitnessapp.supinfo.fitnessapp.listeners.RunnerListTextviewListener;
 import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
@@ -123,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
     public void refresh() {
 
         this.rlist = this.rDAO.getAll();
+        ListAdapter runnerAdapter = new RunnerListviewAdapter(this.rlist, this);
+        ListView lv = (ListView) findViewById(R.id.runnerview);
+        lv.setAdapter(runnerAdapter);
     }
 
     @Override
