@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     public static final int RUNNER_ACTIVITY_CODE = 1;
+    public ArrayList<Runner> array;
+
+    private RunnerDAOImpl rDAO;
 
 
     @Override
@@ -49,9 +52,85 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+        //-----------------------------------------------------------------------
+        this.rDAO = new RunnerDAOImpl(this);
+
+        if (savedInstanceState != null) {
+            ((EditText) findViewById(R.id.runnerweight)).setText(savedInstanceState.getString("newRunner"));
+            Log.i("RUNNER", "RESTORED FROM onCREATE");
+        }
+
+        RunnerListTextviewListener.setActivity(this);
+        this.refresh();
 
     }
 
+    public void add(View view) {
+        EditText eText = (EditText) findViewById(R.id.runnerweight);
+
+        if (eText.getText().toString().trim().length() > 0) {
+            this.addWeight(Integer.valueOf(String.valueOf(eText.getText())));
+
+            eText.setText("");
+            Toast.makeText(this, "!! Weight added !!", Toast.LENGTH_SHORT).show();
+            ;
+        } else {
+            Toast.makeText(this, "Empty field !", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+
+
+    public void addWeight(int weight) {
+        Runner runner = new Runner();
+        runner.setWeight(weight);
+        runner.setDate(Calendar.getInstance().getTime());
+
+        this.rDAO.save(runner);
+        this.refresh();
+    }
+
+
+    public void refresh() {
+
+        this.array = this.rDAO.getAll();
+
+        //AVEC ADAPTER personalisé
+        ListAdapter runnera = new RunnerListviewAdapter(this.array, this);
+        ListView ll = (ListView) findViewById(R.id.runnersview);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case MainActivity.RUNNER_ACTIVITY_CODE:
+                if(resultCode == RESULT_OK) {
+                    Bundle b = data.getExtras();
+                    Runner q = (Runner)b.getSerializable("runner");
+                    this.rDAO.save(q);
+                    this.refresh();
+
+                }
+                break;
+        }
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        Log.i("RUNNER", "SAVED");
+        assert ((EditText) findViewById(R.id.runnerweight)) != null;
+        outState.putString("newWeight", ((EditText) findViewById(R.id.runnerweight)).getText().toString().trim());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        ((EditText) findViewById(R.id.runnerweight)).setText(savedInstanceState.getString("newWeight"));
+        Log.i("RUNNER", "RESTORED");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -83,10 +162,10 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new WeightFragment();
                     break;
                 case 1:
-                    fragment = new StatsFragment();
+                    fragment = new FootActivity();
                     break;
                 case 2:
-                    fragment = new StatsFragment(); // à modifier pour faire la localisation
+                    fragment = new StatsFragment();
             }
             return fragment;
         }

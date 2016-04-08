@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">FitnessAPP</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_foot_track">Map</string>
     <string name="weightbutton">OK</string>
-    <string name="weighttypo">Type here</string>
+    <string name="title_activity_foot">Foottrack</string>
 </resources>

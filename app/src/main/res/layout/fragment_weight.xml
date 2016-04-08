@@ -1,11 +1,10 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent" xmlns:tools="http://schemas.android.com/tools"
               android:id="@+id/runnersList"
-              android:orientation="vertical"
-              tools:context="fitnessapp.supinfo.fitnessapp.RunnerListActivity">
+              android:orientation="vertical">
 
-        <LinearLayout
+        <android.support.v7.widget.LinearLayoutCompat
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -27,13 +26,13 @@
                     android:id="@+id/runnerbutton" android:text="@string/weightbutton"
                     android:onClick="add"
             />
-        </LinearLayout>
+        </android.support.v7.widget.LinearLayoutCompat>
     <ListView
             android:id="@+id/runnersview"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical" />
+            android:layout_height="515dp"
+            android:orientation="vertical" android:layout_gravity="center_horizontal|bottom"/>
 
 
-</LinearLayout>
+</android.support.v7.widget.LinearLayoutCompat>
 

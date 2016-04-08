@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import fitnessapp.supinfo.fitnessapp.WeightFragment;
 import fitnessapp.supinfo.fitnessapp.listeners.RunnerListTextviewListener;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
 
@@ -42,13 +43,9 @@ public class RunnerListviewAdapter extends BaseAdapter {
 
         text.setPadding(15, 15, 15, 15);
         text.setText(item.getWeight());
+        text.setText((CharSequence) item.getDate());
         text.setTextSize(20);
-        if(position % 2 == 0){
-            text.setBackgroundColor(Color.rgb(200, 200, 200));
-        }
-        else {
-            text.setBackgroundColor(Color.rgb(255,255,255));
-        }
+
         return text;
     }
 }
