@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+
         //-----------------------------------------------------------------------
         this.rDAO = new RunnerDAOImpl(this);
 
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         EditText eText = (EditText) findViewById(R.id.runnerweight);
 
         if (eText.getText().toString().trim().length() > 0) {
-            this.addWeight(Integer.valueOf(String.valueOf(eText.getText())));
+            this.addWeight(String.valueOf(eText.getText()));
 
             eText.setText("");
             Toast.makeText(this, "!! Weight added !!", Toast.LENGTH_SHORT).show();
@@ -80,9 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-
-    public void addWeight(int weight) {
+    public void addWeight(String weight) {
         Runner runner = new Runner();
         runner.setWeight(weight);
         runner.setDate(Calendar.getInstance().getTime());
@@ -94,11 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void refresh() {
 
-        this.array = this.rDAO.getAll();
-
         //AVEC ADAPTER personalisé
-        ListAdapter runnera = new RunnerListviewAdapter(this.array, this);
-        ListView ll = (ListView) findViewById(R.id.runnersview);
+
 
     }
 

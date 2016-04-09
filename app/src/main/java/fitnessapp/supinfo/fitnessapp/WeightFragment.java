@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import fitnessapp.supinfo.fitnessapp.adapters.RunnerListviewAdapter;
@@ -22,10 +23,19 @@ public class WeightFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        this.rDAO = new RunnerDAOImpl(this.getActivity());
+        this.array = this.rDAO.getAll();
         View v = inflater.inflate(R.layout.fragment_weight, container, false);
+        ListView ll = (ListView) v.findViewById(R.id.runnersview);
+        ListAdapter quotesAdapter = new RunnerListviewAdapter(this.array, getContext());
 
+        ll.setAdapter(quotesAdapter);
         return v;
     }
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
+    }
 
 }

@@ -42,8 +42,8 @@ public class RunnerListviewAdapter extends BaseAdapter {
         text.setOnClickListener(runnerListerner);
 
         text.setPadding(15, 15, 15, 15);
-        text.setText(item.getWeight());
-        text.setText((CharSequence) item.getDate());
+        text.setText(item.getWeight() +" KG   "+item.getDate());
+
         text.setTextSize(20);
 
         return text;

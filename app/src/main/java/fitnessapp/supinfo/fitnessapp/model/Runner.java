@@ -8,15 +8,15 @@ import java.util.Date;
  */
 public class Runner implements Serializable {
 
-    private int weight;
+    private String weight;
     private Date date;
 
-    public int getWeight() { return weight; }
-    public void setWeight(int w) { this.weight = w;}
+    public String getWeight() { return weight; }
+    public void setWeight(String w) { this.weight = w;}
 
     public Date getDate() { return date; }
     public void setDate(Date d) { this.date = d; }
 
-    public int toInt(){ return this.getWeight(); }
+    //public int toInt(){ return this.getWeight(); }
 
 }

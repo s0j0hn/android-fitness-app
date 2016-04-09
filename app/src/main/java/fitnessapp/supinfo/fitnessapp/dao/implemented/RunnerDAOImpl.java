@@ -90,24 +90,25 @@ public class RunnerDAOImpl implements RunnerDAO {
     public ArrayList<Runner> getAll() {
         ArrayList<Runner> result = new ArrayList<Runner>();
         this.open();
-        //DEBUG pour la console
-        Log.i("DEBUG","get all runner weights");
-        Cursor cursor = this.db.query(TABLE_NAME,COLUMNS,null,null,null,null,null);
+        // SQL
+        Log.i("DEBUG", "get all runner weights");
+        Cursor cursor = this.db.query(TABLE_NAME, COLUMNS, null, null, null, null, null);
 
-        if (cursor.getCount() > 0){
+        if(cursor.getCount() > 0){
             cursor.moveToFirst();
         }
 
-        while (!cursor.isAfterLast()){
+        while(!cursor.isAfterLast()){
             Runner r = new Runner();
-            r.setWeight(cursor.getInt(cursor.getColumnIndex(RUNNER_WEIGHT)));
-            //On formate notre date avant de l'envoyer
-            SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
+            r.setWeight(cursor.getString(cursor.getColumnIndex(RUNNER_WEIGHT)));
+            SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             try {
-                r.setDate(formater.parse(cursor.getString(cursor.getColumnIndex(RUNNER_DATE))));
-            }catch (ParseException e){
+                r.setDate(dateFormatter.parse(cursor.getString(cursor.getColumnIndex(RUNNER_DATE))));
+            } catch (ParseException e) {
+
                 e.printStackTrace();
             }
+
             result.add(r);
             cursor.moveToNext();
         }
