@@ -321,6 +321,7 @@ MERGED from com.google.android.gms:play-services-wearable:8.4.0:18:5
 MERGED from com.google.android.gms:play-services-base:8.4.0:18:5
 MERGED from com.google.android.gms:play-services-basement:8.4.0:18:5
 MERGED from com.android.support:support-v4:23.2.1:20:5
+MERGED from com.github.lecho:hellocharts-library:1.5.8:7:5
 	tools:overrideLibrary
 		ADDED from com.android.support:appcompat-v7:23.2.1:23:9
 	android:targetSdkVersion

@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         RunnerListTextviewListener.setActivity(this);
-        this.refresh();
+
 
     }
 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Empty field !", Toast.LENGTH_LONG).show();
         }
-
+        this.refresh();
     }
 
     public void addWeight(String weight) {
@@ -93,10 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void refresh() {
-
-        //AVEC ADAPTER personalisé
-
-
+        WeightFragment w = new WeightFragment();
     }
 
     @Override

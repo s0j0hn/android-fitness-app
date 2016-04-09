@@ -1,7 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="fitnessapp.supinfo.fitnessapp.StatsFragment">
-
-</FrameLayout><!-- From: file:/home/jan/3and/app/src/main/res/layout/fragment_stats.xml -->
+<lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"/>
+<!-- From: file:/home/jan/3and/app/src/main/res/layout/fragment_stats.xml -->
