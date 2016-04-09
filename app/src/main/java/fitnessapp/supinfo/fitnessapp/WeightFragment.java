@@ -12,13 +12,15 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import fitnessapp.supinfo.fitnessapp.adapters.RunnerListviewAdapter;
 import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
+import fitnessapp.supinfo.fitnessapp.listeners.RunnerListTextviewListener;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
 
 import java.util.ArrayList;
 
 
 public class WeightFragment extends Fragment {
-    public ArrayList<Runner> array;
+
+    public ArrayList<Runner> runnersList;
     private RunnerDAOImpl rDAO;
 
     @Override
@@ -35,10 +37,9 @@ public class WeightFragment extends Fragment {
 
     }
     public void refresh(View v){
-        this.array = this.rDAO.getAll();
-        //on popule la liste avec les informations
+        this.runnersList = this.rDAO.getAll();
         ListView ll = (ListView) v.findViewById(R.id.runnersview);
-        ListAdapter quotesAdapter = new RunnerListviewAdapter(this.array, getContext());
+        ListAdapter quotesAdapter = new RunnerListviewAdapter(this.runnersList, getContext());
 
         ll.setAdapter(quotesAdapter);
     }

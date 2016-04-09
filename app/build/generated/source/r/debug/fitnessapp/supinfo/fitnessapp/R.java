@@ -2890,7 +2890,6 @@ containing a value of this type.
         public static final int center=0x7f0d001f;
         public static final int center_horizontal=0x7f0d0020;
         public static final int center_vertical=0x7f0d0021;
-        public static final int chart=0x7f0d009f;
         public static final int checkbox=0x7f0d0079;
         public static final int chronometer=0x7f0d00b9;
         public static final int classic=0x7f0d005a;
@@ -3045,6 +3044,7 @@ containing a value of this type.
         public static final int up=0x7f0d000a;
         public static final int useLogo=0x7f0d0015;
         public static final int view_offset_helper=0x7f0d000b;
+        public static final int weightstats=0x7f0d009f;
         public static final int wide=0x7f0d0041;
         public static final int withText=0x7f0d003e;
         public static final int wrap_content=0x7f0d001b;

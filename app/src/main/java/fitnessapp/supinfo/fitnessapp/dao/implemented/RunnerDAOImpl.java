@@ -115,4 +115,54 @@ public class RunnerDAOImpl implements RunnerDAO {
         this.close();
         return result;
     }
+
+
+    public ArrayList<Runner> getAllWeights() {
+        ArrayList<Runner> result = new ArrayList<Runner>();
+        this.open();
+        // SQL
+        Log.i("DEBUG", "get all runner ONLY weights");
+        Cursor cursor = this.db.query(TABLE_NAME, COLUMNS, null, null, null, null, null);
+
+        if(cursor.getCount() > 0){
+            cursor.moveToFirst();
+        }
+
+        while(!cursor.isAfterLast()){
+            Runner r = new Runner();
+            r.setWeight(cursor.getString(cursor.getColumnIndex(RUNNER_WEIGHT)));
+            result.add(r);
+            cursor.moveToNext();
+        }
+        this.close();
+        return result;
+    }
+
+    public ArrayList<Runner> getAllDates() {
+        ArrayList<Runner> result = new ArrayList<Runner>();
+        this.open();
+        // SQL
+        Log.i("DEBUG", "get all runner weights DATES only");
+        Cursor cursor = this.db.query(TABLE_NAME, COLUMNS, null, null, null, null, null);
+
+        if(cursor.getCount() > 0){
+            cursor.moveToFirst();
+        }
+
+        while(!cursor.isAfterLast()){
+            Runner r = new Runner();
+            SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            try {
+                r.setDate(dateFormatter.parse(cursor.getString(cursor.getColumnIndex(RUNNER_DATE))));
+            } catch (ParseException e) {
+
+                e.printStackTrace();
+            }
+
+            result.add(r);
+            cursor.moveToNext();
+        }
+        this.close();
+        return result;
+    }
 }
