@@ -109,7 +109,7 @@ public class StatsFragment extends Fragment {
         private ColumnChartData generateColumnData() {
             int numSubcolumns = 1;
 
-            List<Column> columns = new ArrayList<Column>();
+            /*List<Column> columns = new ArrayList<Column>();
             List<SubcolumnValue> values;
             for (int i = 0; i < numberofWeights; ++i) {
                 int w = Integer.parseInt(this.runners.get(i).getWeight());
@@ -123,7 +123,8 @@ public class StatsFragment extends Fragment {
             }
 
             ColumnChartData columnChartData = new ColumnChartData(columns);
-            return columnChartData;
+            return columnChartData;*/
+            return null;
         }
 
         private class ValueTouchListener implements ComboLineColumnChartOnValueSelectListener {

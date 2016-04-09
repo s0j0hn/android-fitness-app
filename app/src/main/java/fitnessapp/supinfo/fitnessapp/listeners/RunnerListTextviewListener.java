@@ -29,7 +29,7 @@ public class RunnerListTextviewListener implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(activity, WeightFragment.class);
+        Intent intent = new Intent(activity, MainActivity.class);
         intent.putExtra("id", this.id);
         intent.putExtra("runner", this.runner);
         this.activity.startActivityForResult(intent, MainActivity.RUNNER_ACTIVITY_CODE);

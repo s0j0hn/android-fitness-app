@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
     public static final int RUNNER_ACTIVITY_CODE = 1;
-    public ArrayList<Runner> array;
+    public ArrayList<Runner> runnersList;
 
     private RunnerDAOImpl rDAO;
 
@@ -93,7 +93,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void refresh() {
-        WeightFragment w = new WeightFragment();
+        /*this.runnersList = this.rDAO.getAll();
+        ListView ll = (ListView) getSupportFragmentManager().findViewById(R.id.runnersview);
+        ListAdapter quotesAdapter = new RunnerListviewAdapter(this.runnersList, this);
+
+        ll.setAdapter(quotesAdapter);*/
     }
 
     @Override
