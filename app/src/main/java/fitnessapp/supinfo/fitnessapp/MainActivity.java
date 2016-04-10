@@ -10,14 +10,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.*;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.*;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
-import fitnessapp.supinfo.fitnessapp.adapters.RunnerListviewAdapter;
 import fitnessapp.supinfo.fitnessapp.listeners.RunnerListTextviewListener;
 import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
@@ -146,7 +144,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+        public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -160,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new WeightFragment();
                     break;
                 case 1:
-                    fragment = new FootActivity();
+                    fragment = new FootFragment();
                     break;
                 case 2:
                     fragment = new StatsFragment();

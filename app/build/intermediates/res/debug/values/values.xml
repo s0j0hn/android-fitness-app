@@ -364,6 +364,11 @@
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
+    <!-- From: file:/home/jan/3and/app/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/values/values.xml -->
+    <eat-comment/>
+    <item name="text" type="id"/>
+    <!-- From: file:/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/values/values.xml -->
+    <eat-comment/>
     <item name="up" type="id"/>
     <!-- From: file:/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/values/values.xml -->
     <eat-comment/>
@@ -494,6 +499,10 @@
     <eat-comment/>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <!-- From: file:/home/jan/3and/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="resettracktext">Reset</string>
+    <string name="savetracktext">Save Track</string>
     <!-- From: file:/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -1504,6 +1513,20 @@
         <item name="tabBackground">?attr/selectableItemBackground</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <!-- From: file:/home/jan/3and/app/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/res/values/values.xml -->
+    <eat-comment/>
+    <style name="Bubble.TextAppearance.Dark" parent="android:TextAppearance.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff7f7f7f</item>
+    </style>
+    <style name="Bubble.TextAppearance.Light" parent="Bubble.TextAppearance.Dark">
+        <item name="android:textColor">#ffeeeeee</item>
+    </style>
+    <style name="ClusterIcon.TextAppearance" parent="android:TextAppearance">
+        <item name="android:textColor">#ffeeeeee</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
     <!-- From: file:/home/jan/3and/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/values/values.xml -->
     <eat-comment/>

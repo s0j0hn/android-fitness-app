@@ -3,6 +3,7 @@ package fitnessapp.supinfo.fitnessapp;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.*;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ public class WeightFragment extends Fragment {
     public ArrayList<Runner> runnersList;
     private RunnerDAOImpl rDAO;
     private View v;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,6 +51,13 @@ public class WeightFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
+        if (isRemoving() && v != null) {
+            ((ViewGroup) v).removeAllViews();
+        }
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
         if (isRemoving() && v != null) {
             ((ViewGroup) v).removeAllViews();
         }
