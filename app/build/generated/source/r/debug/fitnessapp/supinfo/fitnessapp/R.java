@@ -3236,15 +3236,14 @@ containing a value of this type.
         public static final int mr_user_route_category_name=0x7f07003a;
         public static final int place_autocomplete_clear_button=0x7f07003b;
         public static final int place_autocomplete_search_hint=0x7f07003c;
-        public static final int resettracktext=0x7f07004e;
-        public static final int savetracktext=0x7f07004f;
+        public static final int savetracktext=0x7f07004e;
         public static final int status_bar_notification_info_overflow=0x7f07003d;
-        public static final int store_picture_message=0x7f070050;
-        public static final int store_picture_title=0x7f070051;
-        public static final int title_activity_foot=0x7f070052;
-        public static final int title_activity_foot_track=0x7f070053;
+        public static final int store_picture_message=0x7f07004f;
+        public static final int store_picture_title=0x7f070050;
+        public static final int title_activity_foot=0x7f070051;
+        public static final int title_activity_foot_track=0x7f070052;
         public static final int wallet_buy_button_place_holder=0x7f07003e;
-        public static final int weightbutton=0x7f070054;
+        public static final int weightbutton=0x7f070053;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a0089;

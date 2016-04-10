@@ -4,6 +4,5 @@
     <string name="title_activity_foot_track">Map</string>
     <string name="weightbutton">OK</string>
     <string name="title_activity_foot">Foottrack</string>
-    <string name="savetracktext">Save Track</string>
-    <string name="resettracktext">Reset</string>
+    <string name="savetracktext">RESET</string>
 </resources>
