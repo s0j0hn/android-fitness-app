@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import fitnessapp.supinfo.fitnessapp.MainActivity;
-import fitnessapp.supinfo.fitnessapp.WeightFragment;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
 
 public class RunnerListTextviewListener implements View.OnClickListener {

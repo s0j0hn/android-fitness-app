@@ -15,7 +15,6 @@ import lecho.lib.hellocharts.view.ComboLineColumnChartView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -87,7 +86,7 @@ public class StatsFragment extends Fragment {
 
                 List<PointValue> values = new ArrayList<PointValue>();
                 for (int j = 0; j < numberofWeights; ++j) {
-                    int w = Integer.parseInt(this.runners.get(j).getWeight());
+                    float w = Float.parseFloat(this.runners.get(j).getWeight());
                     values.add(new PointValue(j, w));
                 }
 

@@ -16,9 +16,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
+import fitnessapp.supinfo.fitnessapp.dao.implemented.TrackDAOImpl;
 import fitnessapp.supinfo.fitnessapp.listeners.RunnerListTextviewListener;
 import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
+import fitnessapp.supinfo.fitnessapp.model.Track;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -29,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     public static final int RUNNER_ACTIVITY_CODE = 1;
     public ArrayList<Runner> runnersList;
-
+    private TrackDAOImpl tDAO;
     private RunnerDAOImpl rDAO;
+
 
 
     @Override
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         //-----------------------------------------------------------------------
         this.rDAO = new RunnerDAOImpl(this);
+        this.tDAO = new TrackDAOImpl(this);
 
         if (savedInstanceState != null) {
             ((EditText) findViewById(R.id.runnerweight)).setText(savedInstanceState.getString("newRunner"));
@@ -62,9 +66,10 @@ public class MainActivity extends AppCompatActivity {
 
         RunnerListTextviewListener.setActivity(this);
 
-
     }
 
+
+    //Pour le bouton ajout de poids
     public void add(View view) {
         EditText eText = (EditText) findViewById(R.id.runnerweight);
 
@@ -79,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         }
         this.refresh();
     }
+
 
     public void addWeight(String weight) {
         Runner runner = new Runner();

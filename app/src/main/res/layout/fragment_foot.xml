@@ -12,20 +12,11 @@
             android:focusableInTouchMode="true">
 
 
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number|text"
-                android:ems="10"
-                android:id="@+id/trackname"
-        />
         <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_weight="20"
-                android:id="@+id/savetrack" android:text="@string/savetracktext"
-                android:onClick="add"
-        />
+                android:id="@+id/savetrack" android:text="@string/savetracktext"/>
     </android.support.v7.widget.LinearLayoutCompat>
     <com.google.android.gms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"

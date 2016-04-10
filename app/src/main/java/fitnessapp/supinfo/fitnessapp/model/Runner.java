@@ -1,11 +1,9 @@
 package fitnessapp.supinfo.fitnessapp.model;
 
+
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Created by jan on 26/03/16.
- */
 public class Runner implements Serializable {
 
     private String weight;

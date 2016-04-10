@@ -61,7 +61,7 @@ public class RunnerDAOImpl implements RunnerDAO {
         //DEBUG
         ContentValues v = new ContentValues();
         v.put(RUNNER_WEIGHT,runner.getWeight());
-        //v.put(RUNNER_DATE,runner.getDate());
+        //v.put(TRACK_LONGITUDE,runner.getDate());
         Log.i("DEBUG","save runner weight");
 
         String[] args = new String[]{DateFormat.format("yyyy-MM-dd kk:mm:ss", runner.getDate()).toString()};

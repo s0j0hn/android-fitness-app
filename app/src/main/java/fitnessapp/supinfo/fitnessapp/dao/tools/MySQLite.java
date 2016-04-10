@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
+import fitnessapp.supinfo.fitnessapp.dao.implemented.TrackDAOImpl;
 
 /**
  * Created by jan on 26/03/16.
@@ -35,10 +36,12 @@ public class MySQLite extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(RunnerDAOImpl.getCreate());
+        db.execSQL(TrackDAOImpl.getCreate());
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(RunnerDAOImpl.getUpgrade(oldVersion, newVersion));
+        db.execSQL(TrackDAOImpl.getUpgrade(oldVersion,newVersion));
     }
 }

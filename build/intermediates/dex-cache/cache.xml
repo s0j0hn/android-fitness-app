@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/jan/3and/app/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4.3/jars/classes.jar"
+        jar="/home/jan/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="4d3de1e946207667e76261421de0218f132960e0">
-        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/classes-e4fd9bccbe0d5cc4c60ac76593546b82d71730ee.jar" />
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/home/jan/3and/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-c37b81b29805bd188f41ee53704362f81f4da02b.jar" />
     </item>
 
 </items>

@@ -1,20 +1,14 @@
 package fitnessapp.supinfo.fitnessapp;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.*;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import fitnessapp.supinfo.fitnessapp.adapters.RunnerListviewAdapter;
 import fitnessapp.supinfo.fitnessapp.dao.implemented.RunnerDAOImpl;
-import fitnessapp.supinfo.fitnessapp.listeners.RunnerListTextviewListener;
 import fitnessapp.supinfo.fitnessapp.model.Runner;
 
 import java.util.ArrayList;
